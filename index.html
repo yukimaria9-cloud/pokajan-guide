@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ポカジャン攻略Lab｜ホロライブドリームス非公式攻略サイト</title>
-<meta name="description" content="ホロライブドリームス（ホロドリ）のミニゲーム「ポカジャン」に特化した非公式攻略サイト。ルール・役一覧・点数表・戦術・ホロメンボードまで徹底解説。" />
+<meta name="description" content="ホロライブドリームス（ホロドリ）のミニゲーム「ポカジャン」に特化した非公式攻略サイト。ルール・役一覧・点数表・戦術・効率的なコインの稼ぎ方まで徹底解説。" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -24,7 +24,7 @@
       <a href="rules.html">ルール・遊び方</a>
       <a href="yaku.html">役一覧・点数表</a>
       <a href="strategy.html">戦術・安全牌</a>
-      <a href="holomen-board.html">ホロメンボード</a>
+      <a href="holomen-board.html">コインの稼ぎ方</a>
     </nav>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
   </div>
@@ -40,12 +40,7 @@
       ホロライブドリームス（ホロドリ）の4人対戦ミニゲーム「ポカジャン」に特化した非公式攻略サイトです。
       基本ルールから役一覧・点数表、勝つための戦術、安全牌の読み方まで、必要な情報をこの1サイトに凝縮しました。
     </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="rules.html">ルールを見る →</a>
-      <a class="btn btn-ghost" href="yaku.html">役・点数表を見る</a>
-    </div>
-
-    <div class="img-placeholder ratio-16-9" style="margin-top:32px;">
+    <div class="img-placeholder ratio-16-9" style="margin-top:28px;">
       <span class="ph-icon">🖼️</span>
       <span class="ph-label">画像：ポカジャンのプレイ画面スクリーンショット</span>
       <span class="ph-desc">手札・山札・捨て札が並ぶ対局画面のキャプチャを配置。サイトの雰囲気を一目で伝えるメインビジュアル。</span>
@@ -71,27 +66,35 @@
 
     <div class="nav-grid">
       <a class="nav-card" href="rules.html">
-        <span class="icon">📖</span>
-        <h3>ルール・遊び方</h3>
+        <div class="nav-card-head">
+          <span class="icon">📖</span>
+          <h3>ルール・遊び方</h3>
+        </div>
         <p>手札の枚数、ターンの進め方、コインの獲得方法、終了条件までポカジャンの基本を一から解説。</p>
         <span class="go">詳しく見る →</span>
       </a>
       <a class="nav-card" href="yaku.html">
-        <span class="icon">🎴</span>
-        <h3>役一覧・点数表</h3>
+        <div class="nav-card-head">
+          <span class="icon">🎴</span>
+          <h3>役一覧・点数表</h3>
+        </div>
         <p>3カード・グループ役・同色ボーナス・ボーナスホロメンまで、点数の仕組みを一覧表で完全整理。</p>
         <span class="go">詳しく見る →</span>
       </a>
       <a class="nav-card" href="strategy.html">
-        <span class="icon">🧠</span>
-        <h3>戦術・安全牌の読み方</h3>
+        <div class="nav-card-head">
+          <span class="icon">🧠</span>
+          <h3>戦術・安全牌の読み方</h3>
+        </div>
         <p>序盤〜終盤の立ち回り、グループの絞り方、危険牌・安全牌の見分け方をデータとともに解説。</p>
         <span class="go">詳しく見る →</span>
       </a>
       <a class="nav-card" href="holomen-board.html">
-        <span class="icon">🗺️</span>
-        <h3>ホロメンボード</h3>
-        <p>育成システム「ホロメンボード」の基本と、ポカジャンとの関係性をあわせて紹介。</p>
+        <div class="nav-card-head">
+          <span class="icon">💰</span>
+          <h3>コインの稼ぎ方</h3>
+        </div>
+        <p>最終順位・BET倍率・ボーナスホロメンなど、獲得コインを効率よく伸ばすポイントを総整理。</p>
         <span class="go">詳しく見る →</span>
       </a>
     </div>
@@ -101,57 +104,36 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="tag">Card Design</span>
-      <h2>ポカジャンのカードデザイン</h2>
-      <p>カードには「ホロメン」「所属期生」「背景色」の3つの情報が描かれています。実際のカードを見ながらイメージをつかんでおきましょう。</p>
+      <span class="tag">About</span>
+      <h2>ポカジャンとは</h2>
+      <p>
+        「ポカジャン」は、ホロライブドリームス（ホロドリ）で遊べる4人対戦のマルチプレイ対応ミニゲームです。
+        「ポカジャン！」仕様の専用カードを使い、ホロメンや期生の組み合わせで役を揃えて、相手のコインを奪い合います。
+        麻雀やドンジャラに近いルールですが、誰かが上がってもゲームは終わらず、山札がなくなるまで何度でも勝負が続くのが最大の特徴です。
+        詳しい進め方は<a href="rules.html">ルール・遊び方ページ</a>で解説しています。
+      </p>
     </div>
-    <div class="grid-2 grid-tight">
+
+    <div class="gallery-grid">
       <div class="img-placeholder ratio-4-3">
         <span class="ph-icon">🃏</span>
-        <span class="ph-label">画像：ポカジャンのカード見本（通常）</span>
-        <span class="ph-desc">ホロメン名・期生アイコン・背景色が確認できるカード1枚のクローズアップ画像。</span>
+        <span class="ph-label">画像：対局中の手札・場の様子</span>
+        <span class="ph-desc">実際のプレイ画面。手札・山札・捨て札の配置が分かるスクリーンショット。</span>
+      </div>
+      <div class="img-placeholder ratio-4-3">
+        <span class="ph-icon">🎉</span>
+        <span class="ph-label">画像：「ポカジャン！」宣言時の演出</span>
+        <span class="ph-desc">役が完成してポカジャンを宣言した瞬間の演出キャプチャ。</span>
       </div>
       <div class="img-placeholder ratio-4-3">
         <span class="ph-icon">🌈</span>
-        <span class="ph-label">画像：同色カードを並べた見本</span>
-        <span class="ph-desc">背景色が全て同じカードを3〜5枚並べた画像。同色ボーナスのイメージが伝わるカット。</span>
+        <span class="ph-label">画像：同色ボーナス成立時の画面</span>
+        <span class="ph-desc">背景色が揃った役でポカジャンした際の特別演出。</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="tag">Quick Facts</span>
-      <h2>ポカジャンをひとことで言うと</h2>
-      <p>初めての人向けに、押さえておきたいポイントを先に4つだけ。</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <h3>👥 4人対戦</h3>
-        <p class="small">7枚の手札からカードを引き・捨てを繰り返し、ホロメンや期生の組み合わせで役を揃える麻雀風ミニゲーム。</p>
-      </div>
-      <div class="card">
-        <h3>💰 上がっても終わらない</h3>
-        <p class="small">誰かが「ポカジャン」を宣言してもゲームは続行。山札切れか、誰かの持ちコインが0になるまで続きます。</p>
-      </div>
-      <div class="card">
-        <h3>🎯 積極上がりが正義</h3>
-        <p class="small">最安の120点でも上がらずに見送ると平均獲得点が大きく下がるというデータも。安い役でもどんどん宣言しよう。</p>
-      </div>
-      <div class="card">
-        <h3>🌈 同色ボーナス</h3>
-        <p class="small">役を構成するカードの背景色が全て同じだと獲得コインが大幅アップ。出現率は低いが得点シェアは高い一発逆転役。</p>
-      </div>
-      <div class="card">
-        <h3>⭐ ボーナスホロメン</h3>
-        <p class="small">ラウンドごとに指定される「ボーナスホロメン」を役に含めると、1枚につき90点が追加加算されます。</p>
-      </div>
-      <div class="card">
-        <h3>🏆 順位で報酬倍率UP</h3>
-        <p class="small">最終順位に応じて獲得コインに倍率がかかる。1位は2.5倍、2位は1.5倍と、着順そのものが重要な報酬要素に。</p>
+      <div class="img-placeholder ratio-4-3">
+        <span class="ph-icon">🏆</span>
+        <span class="ph-label">画像：対局終了・結果発表画面</span>
+        <span class="ph-desc">最終順位とコイン獲得量が表示されるリザルト画面。</span>
       </div>
     </div>
   </div>
@@ -208,7 +190,7 @@
           <li><a href="rules.html">ルール・遊び方</a></li>
           <li><a href="yaku.html">役一覧・点数表</a></li>
           <li><a href="strategy.html">戦術・安全牌</a></li>
-          <li><a href="holomen-board.html">ホロメンボード</a></li>
+          <li><a href="holomen-board.html">コインの稼ぎ方</a></li>
         </ul>
       </div>
       <div>

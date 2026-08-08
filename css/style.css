@@ -380,10 +380,16 @@ img {
   box-shadow: var(--shadow-hover);
   border-color: var(--accent-purple);
 }
+.nav-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .nav-card .icon {
-  font-size: 1.7rem;
-  width: 52px;
-  height: 52px;
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,7 +397,7 @@ img {
   background: linear-gradient(135deg, #fdeaf5, #f2edff);
 }
 .nav-card h3 {
-  margin: 4px 0 0;
+  margin: 0;
   font-size: 1.08rem;
   color: var(--text-primary);
 }
@@ -459,6 +465,32 @@ img {
 @media (max-width: 420px) {
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+}
+
+/* プレイ画像ギャラリー（トップページ「ポカジャンとは」など） */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .gallery-grid .img-placeholder {
+    padding: 12px 10px;
+    min-height: 90px;
+  }
+  .gallery-grid .ph-icon {
+    font-size: 1.3rem;
+  }
+  .gallery-grid .ph-label {
+    font-size: 0.72rem;
+  }
+  .gallery-grid .ph-desc {
+    display: none;
   }
 }
 
