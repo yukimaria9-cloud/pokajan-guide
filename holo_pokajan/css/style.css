@@ -740,48 +740,18 @@ td.num, th.num {
 .shot.ratio-4-3 { aspect-ratio: 4 / 3; }
 
 /* ---------- 広告スロット ----------
-   忍者AdMax / Google AdSense の広告コードを差し込むための枠。
-   コードが決まったら .ad-slot の中身をそのまま広告タグに置き換える。
-   実際の広告コードを入れるまでは、下の display:none で visitors には非表示にしておく。
-   広告掲載を始めるときは、この1行（display: none !important;）を削除するだけで全ページ一括で表示される。 */
-.ad-slot {
-  display: none !important;
-}
+   忍者AdMax の広告タグを js/script.js から差し込むための枠。
+   PC/スマホでサイズが異なるため、JS側で画面幅を見て対応するタグだけを読み込む。 */
 .ad-slot {
   width: 100%;
-  min-height: 90px;
+  min-height: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 12px 16px;
-  border: 1px dashed #e6c27a;
-  border-radius: var(--radius-md);
-  background: #fffaf0;
-  text-align: center;
   overflow: hidden;
 }
-.ad-slot .ad-tag {
-  font-size: 0.66rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #b9822c;
-}
-.ad-slot .ad-note {
-  font-size: 0.76rem;
-  color: var(--text-muted);
-}
-.ad-slot.ad-slot--rectangle {
-  min-height: 120px;
-}
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .ad-slot {
-    min-height: 70px;
-    padding: 10px 12px;
-  }
-  .ad-slot.ad-slot--rectangle {
     min-height: 90px;
   }
 }
