@@ -720,6 +720,25 @@ td.num, th.num {
 .img-placeholder.ratio-1-1 { aspect-ratio: 1 / 1; max-width: 280px; margin: 0 auto; }
 .img-placeholder.ratio-4-3 { aspect-ratio: 4 / 3; }
 
+/* ---------- 実画像スロット（.img-placeholder と同じ比率クラスを共用） ---------- */
+.shot {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  background: #eee;
+}
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.shot.ratio-16-9 { aspect-ratio: 16 / 9; }
+.shot.ratio-4-3 { aspect-ratio: 4 / 3; }
+
 /* ---------- 広告スロット ----------
    忍者AdMax / Google AdSense の広告コードを差し込むための枠。
    コードが決まったら .ad-slot の中身をそのまま広告タグに置き換える。 */
