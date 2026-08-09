@@ -741,7 +741,12 @@ td.num, th.num {
 
 /* ---------- 広告スロット ----------
    忍者AdMax / Google AdSense の広告コードを差し込むための枠。
-   コードが決まったら .ad-slot の中身をそのまま広告タグに置き換える。 */
+   コードが決まったら .ad-slot の中身をそのまま広告タグに置き換える。
+   実際の広告コードを入れるまでは、下の display:none で visitors には非表示にしておく。
+   広告掲載を始めるときは、この1行（display: none !important;）を削除するだけで全ページ一括で表示される。 */
+.ad-slot {
+  display: none !important;
+}
 .ad-slot {
   width: 100%;
   min-height: 90px;
