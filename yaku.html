@@ -86,45 +86,44 @@
         <p>役の種類ごとの基本点数と、後述する「同色ボーナス」成立時の点数をまとめました。</p>
       </div>
 
-      <div class="table-wrap">
+      <div class="table-wrap table-compact">
         <table>
           <thead>
             <tr>
-              <th>役</th>
-              <th>成立条件</th>
-              <th class="num">通常点</th>
-              <th class="num">同色時</th>
+              <th style="width:20%;">役</th>
+              <th style="width:36%;">成立条件</th>
+              <th class="num" style="width:22%;">通常点</th>
+              <th class="num" style="width:22%;">同色時</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>3カード</td>
-              <td>同じホロメンのカードを3枚集める</td>
+              <td>同じホロメンを3枚</td>
               <td class="num">120 Pt</td>
               <td class="num">840 Pt</td>
             </tr>
             <tr>
               <td>3人ユニット役</td>
-              <td>3人編成グループの対象ホロメンを1枚ずつ揃える</td>
+              <td>3人グループを1枚ずつ</td>
               <td class="num">180 Pt</td>
               <td class="num">480 Pt</td>
             </tr>
             <tr>
               <td>4人ユニット役</td>
-              <td>4人編成グループの対象ホロメンを1枚ずつ揃える</td>
+              <td>4人グループを1枚ずつ</td>
               <td class="num">300 Pt</td>
               <td class="num">840 Pt</td>
             </tr>
             <tr>
               <td>5人ユニット役</td>
-              <td>5人編成グループの対象ホロメンを1枚ずつ揃える</td>
+              <td>5人グループを1枚ずつ</td>
               <td class="num">480 Pt</td>
               <td class="num">1,800 Pt</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="small" style="margin-top:10px;">※ 点数はプレイヤーによる調査結果に基づく目安です。アップデートで調整される可能性があるため、実際の点数はゲーム内表示を優先してください。</p>
 
       <div class="img-placeholder ratio-16-9" style="margin-top:18px;">
         <span class="ph-icon">🖼️</span>
@@ -144,12 +143,6 @@
         <span class="emoji">🌈</span>
         <p><strong>同色は一発逆転の切り札</strong>：上の点数表の通り、3カードなら120→840点（約7倍）と跳ね上がります。出現率自体は低い（実測で6%程度という分析もある）一方、獲得できる総得点への貢献度は高く、リーチがかかったら粘る価値のある役です。</p>
       </div>
-
-      <div class="img-placeholder ratio-16-9" style="margin-top:18px;">
-        <span class="ph-icon">🖼️</span>
-        <span class="ph-label">画像：同色ボーナス成立時の演出スクリーンショット</span>
-        <span class="ph-desc">背景色が揃った状態でポカジャン宣言した際に表示される演出・エフェクトのキャプチャ。</span>
-      </div>
     </div>
 
     <div id="bonus-holomen" style="margin-top:48px;">
@@ -168,39 +161,45 @@
         <span class="emoji">💡</span>
         <p>ボーナスホロメンのカードは他家からも狙われやすい人気札になりがちです。手札に来たら基本的にキープし、序盤から意識して集めておくのがおすすめです。</p>
       </div>
+
+      <div class="img-placeholder ratio-16-9" style="margin-top:16px;">
+        <span class="ph-icon">🖼️</span>
+        <span class="ph-label">画像：ボーナスホロメンの表示画面</span>
+        <span class="ph-desc">ラウンド開始時にボーナスホロメンが指定される画面や、手札上での見た目の違いが分かるキャプチャ。</span>
+      </div>
     </div>
 
     <div id="share" style="margin-top:48px;">
       <div class="section-head">
         <span class="tag">Data</span>
-        <h2>役ごとの得点シェア（プレイヤー分析）</h2>
-        <p>有志プレイヤーによる集計データでは、役の種類ごとの出現率と得点への貢献度に以下のような傾向が報告されています。</p>
+        <h2>役ごとの得点シェア（傾向）</h2>
+        <p>役の種類ごとの出現率と、得点全体への貢献度には、おおまかに以下のような傾向があります。</p>
       </div>
 
-      <div class="table-wrap">
+      <div class="table-wrap table-compact">
         <table>
           <thead>
             <tr>
-              <th>役の系統</th>
-              <th class="num">出現率の傾向</th>
-              <th class="num">総得点シェア</th>
+              <th style="width:40%;">役の系統</th>
+              <th class="num" style="width:28%;">出現率</th>
+              <th class="num" style="width:32%;">得点への貢献度</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>グループ役全般（3〜5人ユニット）</td>
-              <td class="num">高い</td>
-              <td class="num">約60%</td>
+              <td class="num">高め</td>
+              <td class="num">全体の半分以上</td>
             </tr>
             <tr>
               <td>同色役（色統一ボーナス）</td>
-              <td class="num">約6%と低頻度</td>
-              <td class="num">約18.9%</td>
+              <td class="num">かなり低め</td>
+              <td class="num">出現率のわりに大きい</td>
             </tr>
             <tr>
               <td>3カード（同一ホロメン）</td>
               <td class="num">頻出</td>
-              <td class="num">相対的に低い</td>
+              <td class="num">1回あたりは小さめ</td>
             </tr>
           </tbody>
         </table>

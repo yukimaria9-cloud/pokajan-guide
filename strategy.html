@@ -57,9 +57,8 @@
         <li><a href="#group">グループの絞り方（序盤）</a></li>
         <li><a href="#phase">局面別の立ち回り</a></li>
         <li><a href="#safe">安全牌・危険牌の見分け方</a></li>
-        <li><a href="#char-count">キャラ数別に見る安全度（独自試算）</a></li>
+        <li><a href="#char-count">キャラ数別に見る安全度</a></li>
         <li><a href="#data">知っておきたいデータ</a></li>
-        <li><a href="#bet">BET倍率の考え方</a></li>
       </ol>
     </div>
 
@@ -77,12 +76,6 @@
       <div class="callout warn">
         <span class="emoji">⚠️</span>
         <p><strong>守りすぎも逆効果</strong>：危険牌を全て避けようとすると手詰まりになり、結果的に機会損失が増えます。危険度の高い牌を1〜2枚だけ避ける程度の「ほどほどの守り」が最適とされています。</p>
-      </div>
-
-      <div class="img-placeholder ratio-16-9" style="margin-top:18px;">
-        <span class="ph-icon">🖼️</span>
-        <span class="ph-label">画像：積極上がりと見送りの得点差グラフ</span>
-        <span class="ph-desc">「見送ると平均獲得点が下がる」ことを示す簡易的な棒グラフやイラスト図解。</span>
       </div>
     </div>
 
@@ -136,6 +129,7 @@
           <div class="step-body">
             <h4>終盤：高い放銃を避けて着順を守る</h4>
             <p>山札が20枚を切るあたりから他家の手の内が絞られてきます。首位や2位を確保できているなら、大きな役への放銃を避けることを最優先に。逆に大きく負けているなら一発逆転の高得点役へ切り替える判断も必要です。</p>
+            <p>特に勝っている局面では、多少放銃するとしても打点が低めの役（3人編成グループなど）が絡むカードを優先的に切り、最悪のケースを想定した安全策をとるのが有効です。</p>
           </div>
         </li>
       </ol>
@@ -172,19 +166,13 @@
         <span class="emoji">🎯</span>
         <p><strong>合わせ打ちが基本の防御策</strong>：直前に捨てられたのと同じカードを出す「合わせ打ち」は、既にそのカードで上がれるなら直前のプレイヤーが見送っている＝今は上がれない、という理屈に基づく最も基本的な失点回避テクニックです。</p>
       </div>
-
-      <div class="img-placeholder ratio-16-9" style="margin-top:18px;">
-        <span class="ph-icon">🖼️</span>
-        <span class="ph-label">画像：安全牌・危険牌の判定フロー図解</span>
-        <span class="ph-desc">「場に何枚出ているか」「対象グループの状況」などから安全度を判断する流れをまとめたチャート風イラスト。</span>
-      </div>
     </div>
 
     <div id="char-count" style="margin-top:48px;">
       <div class="section-head">
         <span class="tag">Original Data</span>
-        <h2>キャラ数別に見る安全度（本サイト独自試算）</h2>
-        <p>実装されているホロメンの人数（キャラ数）によって、1キャラ・1色あたりの「場に出回る期待枚数」は大きく変わります。他ではあまり語られていない、キャラ数を起点にした安全牌の考え方を紹介します。</p>
+        <h2>キャラ数別に見る安全度</h2>
+        <p>実装されているホロメンの人数（キャラ数）によって、1キャラ・1色あたりの「場に出回る期待枚数」は大きく変わります。キャラ数を起点にした安全牌の考え方を紹介します。</p>
       </div>
 
       <div class="callout info">
@@ -192,14 +180,14 @@
         <p><strong>試算の前提</strong>：同じホロメンのカードは1キャラにつき9枚（3色 × 各3枚）存在すると仮定。1局で実際に場に出回るカードは、総枚数の中から100枚が使用されるものとして計算しています。総枚数は「キャラ数 × 9」で推定しました。</p>
       </div>
 
-      <div class="table-wrap" style="margin-top:14px;">
+      <div class="table-wrap table-compact" style="margin-top:14px;">
         <table>
           <thead>
             <tr>
-              <th>キャラ数</th>
-              <th class="num">総枚数</th>
-              <th class="num">1キャラあたり期待枚数</th>
-              <th class="num">1キャラ同色あたり期待枚数</th>
+              <th style="width:16%;">キャラ数</th>
+              <th class="num" style="width:22%;">総枚数</th>
+              <th class="num" style="width:31%;">1キャラ<br />期待枚数</th>
+              <th class="num" style="width:31%;">1キャラ同色<br />期待枚数</th>
             </tr>
           </thead>
           <tbody>
@@ -228,33 +216,22 @@
       <div class="section-head">
         <span class="tag">Data</span>
         <h2>知っておきたいデータ</h2>
-        <p>有志プレイヤーによる対戦データの分析では、以下のような傾向が報告されています。立ち回りの参考にしてください。</p>
+        <p>実戦を通じて見えてきた、大まかな傾向を紹介します。立ち回りの参考にしてください。</p>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <h3>🎲 配牌の影響は小さい</h3>
-          <p class="small">配牌の良さと最終得点の相関係数は0.17程度と低く、初期手札の運よりもその後の判断が結果を左右します。</p>
+          <p class="small">配牌の良し悪しと最終得点の関係は思ったより弱く、初期手札の運よりもその後の判断が結果を左右します。</p>
         </div>
         <div class="card">
           <h3>💺 席順の差はほぼゼロ</h3>
-          <p class="small">座る位置による有利不利は実質的にないというデータもあり、席順を気にする必要は薄いようです。</p>
+          <p class="small">座る位置による有利不利はほとんど感じられず、席順を気にする必要は薄いようです。</p>
         </div>
         <div class="card">
           <h3>📈 短期戦は運の影響が大きい</h3>
-          <p class="small">初級者相手でも10局程度では2割ほど負け越す可能性があり、実力差がはっきり出るのは100局以上の長期戦とされています。1回1回の結果に一喜一憂しすぎないことも大切です。</p>
+          <p class="small">初級者相手でも短期的には負け越すことがあり、実力差がはっきり出てくるのはある程度の対局数をこなした後です。1回1回の結果に一喜一憂しすぎないことも大切です。</p>
         </div>
-      </div>
-    </div>
-
-    <div id="bet" style="margin-top:48px;">
-      <div class="section-head">
-        <span class="tag">Bet</span>
-        <h2>BET倍率の考え方</h2>
-      </div>
-      <div class="callout info">
-        <span class="emoji">💰</span>
-        <p>対戦開始時のBET（賭け）倍率は、高く設定するほど期待値がプラスに働きやすいというプレイヤー分析があります（期待値+86%という報告も）。もちろん負けた際のリスクも比例して大きくなるため、所持コインに余裕がある時に積極的に高倍率へ挑戦するのがおすすめです。</p>
       </div>
     </div>
 
@@ -265,7 +242,7 @@
   <div class="container">
     <div class="callout info">
       <span class="emoji">➡️</span>
-      <p>育成システムが気になる方は<strong><a href="holomen-board.html">ホロメンボードページ</a></strong>もチェックしてみてください。</p>
+      <p>コインをもっと効率よく稼ぎたい方は<strong><a href="holomen-board.html">コインの稼ぎ方ページ</a></strong>もチェックしてみてください。</p>
     </div>
   </div>
 </section>

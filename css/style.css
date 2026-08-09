@@ -365,6 +365,7 @@ img {
   gap: 16px;
 }
 .nav-card {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
@@ -374,6 +375,14 @@ img {
   gap: 10px;
   box-shadow: var(--shadow-card);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.nav-card-head {
+  padding-right: 64px;
+}
+.nav-card .go {
+  position: absolute;
+  top: 22px;
+  right: 22px;
 }
 .nav-card:hover {
   transform: translateY(-4px);
@@ -595,6 +604,27 @@ tbody tr:hover td {
   background: var(--bg-card-hover);
   color: var(--text-primary);
 }
+/* スマホの画面幅に収めたい表用（横スクロールさせない） */
+.table-compact table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+.table-compact th,
+.table-compact td {
+  white-space: normal;
+  word-break: break-word;
+  padding: 10px 8px;
+  font-size: 0.82rem;
+}
+@media (max-width: 480px) {
+  .table-compact th,
+  .table-compact td {
+    padding: 8px 5px;
+    font-size: 0.74rem;
+  }
+}
+
 td.num, th.num {
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -964,6 +994,10 @@ td.num, th.num {
 
   .nav-card {
     padding: 18px 18px;
+  }
+  .nav-card .go {
+    top: 18px;
+    right: 18px;
   }
 
   /* 見出し直後の余白も詰める */
