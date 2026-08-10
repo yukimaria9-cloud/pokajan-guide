@@ -115,6 +115,12 @@
     color: var(--text-muted);
   }
   a { color: var(--accent-purple-strong); }
+  .ad-pc-only { display: block; }
+  .ad-sp-only { display: none; }
+  @media (max-width: 767px) {
+    .ad-pc-only { display: none; }
+    .ad-sp-only { display: block; }
+  }
 </style>
 </head>
 <body>
@@ -138,33 +144,33 @@
     </div>
   </div>
 
-  <div id="ad-inline-hub" style="margin-top:24px;"></div>
+  <div id="ad-inline-hub" style="margin-top:24px;">
+    <div class="ad-pc-only">
+      <!-- admax -->
+      <script src="https://adm.shinobi.jp/s/65c7d77707083429e7a6757025c9b1c0"></script>
+      <!-- admax -->
+    </div>
+    <div class="ad-sp-only">
+      <!-- admax -->
+      <script src="https://adm.shinobi.jp/s/e65ecf7eae7f5dd310829d086626ddbd"></script>
+      <!-- admax -->
+    </div>
+  </div>
 
   <footer>© 2026 GuideLabo</footer>
 </div>
 
-<div id="ad-fixed-hub"></div>
-<script>
-  var ADS_HUB = {
-    inline: {
-      pc: "https://adm.shinobi.jp/s/65c7d77707083429e7a6757025c9b1c0", // poka-PC-728x90
-      sp: "https://adm.shinobi.jp/s/e65ecf7eae7f5dd310829d086626ddbd"  // poka-SP-320x50
-    },
-    fixed: {
-      pc: "https://adm.shinobi.jp/s/98ddc85e799a562418a611fb01b78c9f", // poka-PC-160x600（右サイド固定）
-      sp: "https://adm.shinobi.jp/s/53424dc3792c66e8c524dbb14efe6b9a"  // poka-SP-ovl-320x50（オーバーレイ）
-    }
-  };
-  function loadAdHub(containerId, srcPc, srcSp) {
-    var isPc = window.innerWidth >= 768;
-    var s = document.createElement("script");
-    s.src = isPc ? srcPc : srcSp;
-    s.async = false; // document.write()を使うタグのため、非同期実行にすると描画がブロックされる
-    var target = document.getElementById(containerId);
-    if (target) target.appendChild(s);
-  }
-  loadAdHub("ad-inline-hub", ADS_HUB.inline.pc, ADS_HUB.inline.sp);
-  loadAdHub("ad-fixed-hub", ADS_HUB.fixed.pc, ADS_HUB.fixed.sp);
-</script>
+<div id="ad-fixed-hub">
+  <div class="ad-pc-only">
+    <!-- admax -->
+    <script src="https://adm.shinobi.jp/s/98ddc85e799a562418a611fb01b78c9f"></script>
+    <!-- admax -->
+  </div>
+  <div class="ad-sp-only">
+    <!-- admax -->
+    <script src="https://adm.shinobi.jp/s/53424dc3792c66e8c524dbb14efe6b9a"></script>
+    <!-- admax -->
+  </div>
+</div>
 </body>
 </html>
