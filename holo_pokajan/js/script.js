@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isPC = window.innerWidth >= 768;
     const s = document.createElement("script");
     s.src = isPC ? srcPc : srcSp;
+    s.async = false; // document.write()を使うタグのため、非同期実行にすると描画がブロックされる
     el.appendChild(s);
   }
 

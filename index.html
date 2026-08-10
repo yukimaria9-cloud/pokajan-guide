@@ -159,6 +159,7 @@
     var isPc = window.innerWidth >= 768;
     var s = document.createElement("script");
     s.src = isPc ? srcPc : srcSp;
+    s.async = false; // document.write()を使うタグのため、非同期実行にすると描画がブロックされる
     var target = document.getElementById(containerId);
     if (target) target.appendChild(s);
   }
