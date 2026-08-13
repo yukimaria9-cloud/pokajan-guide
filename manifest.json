@@ -1,0 +1,19 @@
+{
+  "name": "GuideLabo｜ゲーム攻略まとめ",
+  "short_name": "GuideLabo",
+  "description": "複数のゲームの攻略情報をまとめるハブサイト「GuideLabo」。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "ja",
+  "theme_color": "#8b5cf6",
+  "background_color": "#fff8fb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

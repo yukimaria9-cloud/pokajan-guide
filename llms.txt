@@ -1,0 +1,40 @@
+# GuideLabo
+
+> GuideLabo（guidelabo.com）は、複数のゲームの攻略情報をまとめる個人運営のハブサイトです。現在は、ホロライブドリームス（ホロドリ）のミニゲーム「ポカジャン」に特化した非公式攻略サイト「ポカジャン攻略Lab」を公開しています。本サイトは各ゲームの公式運営・権利者とは一切関係のないファンサイトです。
+
+GuideLaboはゲームタイトルごとにサブサイトを持つ構成です。現時点で公開中のサブサイトは「ポカジャン攻略Lab」のみで、日本語・英語・インドネシア語の3言語に対応しています。
+
+## ポカジャン攻略Lab（日本語）
+
+- [トップページ](https://guidelabo.com/holo_pokajan/): ポカジャン攻略Labのトップ。ルール・役一覧・戦術・コインの稼ぎ方など全コンテンツへの入り口。
+- [ルール・遊び方](https://guidelabo.com/holo_pokajan/rules.html): 手札枚数、ターンの進め方、コイン獲得の仕組み、終了条件、順位ボーナスなど基本ルールの解説。
+- [役一覧・点数表](https://guidelabo.com/holo_pokajan/yaku.html): 3カード、期生グループ役、同色ボーナス、ボーナスホロメン加算まで役と点数を一覧表で整理。
+- [戦術・安全牌の読み方](https://guidelabo.com/holo_pokajan/strategy.html): 序盤〜終盤の立ち回り、グループの絞り方、安全牌・危険牌の見分け方をデータとともに解説。
+- [コインの稼ぎ方](https://guidelabo.com/holo_pokajan/holomen-board.html): 最終順位倍率、BET倍率、ホロパスポートの使い方など効率的なコイン稼ぎのポイント。
+- [配信リスト](https://guidelabo.com/holo_pokajan/streams.html): ホロライブメンバーによるポカジャン配信・切り抜き動画のまとめ（JP・EN・ID）。
+- [再生数分析（番外編）](https://guidelabo.com/holo_pokajan/song-views.html): ホロドリ実装のソロ楽曲について、実装後のYouTube再生数の伸び率を独自集計したランキング。
+
+## Pokajan Strategy Lab (English)
+
+- [Top page](https://guidelabo.com/holo_pokajan/en/): Unofficial fan-made strategy guide for "Pokajan," the mini-game in hololive Dreams.
+- [Rules & how to play](https://guidelabo.com/holo_pokajan/en/rules.html)
+- [Yaku list & scoring](https://guidelabo.com/holo_pokajan/en/yaku.html)
+- [Strategy guide](https://guidelabo.com/holo_pokajan/en/strategy.html)
+- [Coin farming guide](https://guidelabo.com/holo_pokajan/en/holomen-board.html)
+- [Stream list](https://guidelabo.com/holo_pokajan/en/streams.html)
+- [Solo song view-count analysis](https://guidelabo.com/holo_pokajan/en/song-views.html)
+
+## Pokajan Strategy Lab (Bahasa Indonesia)
+
+- [Halaman utama](https://guidelabo.com/holo_pokajan/id/): Panduan strategi buatan penggemar untuk "Pokajan," mini-game di hololive Dreams.
+- [Aturan & cara bermain](https://guidelabo.com/holo_pokajan/id/rules.html)
+- [Daftar yaku & skor](https://guidelabo.com/holo_pokajan/id/yaku.html)
+- [Panduan strategi](https://guidelabo.com/holo_pokajan/id/strategy.html)
+- [Cara mengumpulkan koin](https://guidelabo.com/holo_pokajan/id/holomen-board.html)
+- [Daftar siaran](https://guidelabo.com/holo_pokajan/id/streams.html)
+- [Analisis pertumbuhan views lagu solo](https://guidelabo.com/holo_pokajan/id/song-views.html)
+
+## Optional
+
+- [プライバシーポリシー](https://guidelabo.com/privacy.html): 広告配信・アクセス解析・Cookieの利用について。
+- [llms-full.txt](https://guidelabo.com/llms-full.txt): 主要ページの内容をまとめた詳細版（Markdown）。

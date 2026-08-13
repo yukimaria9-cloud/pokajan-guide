@@ -1,4 +1,63 @@
+# GuideLabo / ポカジャン攻略Lab
+# 通常の検索エンジンクローラー
 User-agent: *
+Allow: /
+
+# --- AI検索・生成AIクローラー（明示的に許可し、引用・回答での参照を促進） ---
+
+# OpenAI（ChatGPTの学習用クローラー）
+User-agent: GPTBot
+Allow: /
+
+# OpenAI（ChatGPTユーザーのリアルタイム参照）
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI（ChatGPT検索用クローラー）
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic（Claudeの学習用クローラー）
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic（Claudeユーザーのリアルタイム参照）
+User-agent: Claude-User
+Allow: /
+
+# Anthropic（Claude検索用クローラー）
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google（Geminiなど生成AIの学習用途）
+User-agent: Google-Extended
+Allow: /
+
+# Apple（Apple Intelligenceの学習用途）
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl（多くのAIモデルの学習データ元）
+User-agent: CCBot
+Allow: /
+
+# ByteDance（TikTok/Doubao等の学習用クローラー）
+User-agent: Bytespider
+Allow: /
+
+# Amazon（Alexa/AIサービスの学習用クローラー）
+User-agent: Amazonbot
+Allow: /
+
+# Meta（Llama等の学習用クローラー）
+User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://guidelabo.com/sitemap.xml

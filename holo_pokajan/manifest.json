@@ -1,0 +1,19 @@
+{
+  "name": "ポカジャン攻略Lab｜ホロライブドリームス非公式攻略サイト",
+  "short_name": "ポカジャン攻略Lab",
+  "description": "ホロライブドリームス（ホロドリ）のミニゲーム「ポカジャン」に特化した非公式攻略サイト。",
+  "start_url": "/holo_pokajan/",
+  "scope": "/holo_pokajan/",
+  "display": "standalone",
+  "lang": "ja",
+  "theme_color": "#8b5cf6",
+  "background_color": "#fff8fb",
+  "icons": [
+    {
+      "src": "/holo_pokajan/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
