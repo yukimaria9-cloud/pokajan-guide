@@ -109,6 +109,7 @@
             <th class="num" data-key="implViews" data-type="num">実装日時点の<br>再生数 <span class="arrow">↕</span></th>
             <th class="num" data-key="current" data-type="num">現在の再生数<br>(2026/8/14) <span class="arrow">↕</span></th>
             <th class="num" data-key="growth" data-type="num">増加数 <span class="arrow">↕</span></th>
+            <th class="graph-col">推移<br>グラフ</th>
             <th class="num" data-key="implDate" data-type="date">実装日 <span class="arrow">↕</span></th>
           </tr>
         </thead>
@@ -203,6 +204,10 @@ function fmt(n){ return n.toLocaleString('ja-JP'); }
 function fmtDate(d){ const [y,m,day] = d.split('-'); return `${y}/${m}/${day}`; }
 function escapeHtml(s){ const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
+// 楽曲別の推移グラフページが用意済みの動画ID一覧(holo_pokajan/songs/{videoId}.html)
+const GRAPH_PAGE_IDS = new Set(["8ZP5eqm4JqM"]);
+function videoIdFromUrl(url){ const m = url.match(/[?&]v=([^&]+)/); return m ? m[1] : null; }
+
 // スマホ表示用：曲名をUTF-8換算30バイトごとに改行(<br>)する
 function byteWrapHtml(str, maxBytes){
   const enc = new TextEncoder();
@@ -280,6 +285,16 @@ function render(sortKey, dir){
     tdGrowth.className = 'num';
     tdGrowth.innerHTML = r.growth != null ? '+' + fmt(r.growth) : '<span class="na">—</span>';
     tr.appendChild(tdGrowth);
+
+    const tdGraph = document.createElement('td');
+    tdGraph.className = 'graph-col';
+    const vid = videoIdFromUrl(r.url);
+    if (vid && GRAPH_PAGE_IDS.has(vid)) {
+      tdGraph.innerHTML = `<a class="graph-link" href="songs/${vid}.html" aria-label="${escapeHtml(r.title)}の再生数推移グラフを見る">📈</a>`;
+    } else {
+      tdGraph.innerHTML = '<span class="graph-link disabled" title="準備中">📈</span>';
+    }
+    tr.appendChild(tdGraph);
 
     const tdImplDate = document.createElement('td');
     tdImplDate.className = 'num';

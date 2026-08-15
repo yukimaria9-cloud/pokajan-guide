@@ -708,6 +708,129 @@ a.song-link:hover {
   }
 }
 
+/* 推移グラフ列（曲名一覧 → 楽曲別ページへの導線） */
+th.graph-col, td.graph-col {
+  text-align: center;
+}
+a.graph-link {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1;
+  filter: grayscale(0);
+  transition: transform 0.12s ease;
+}
+a.graph-link:hover { transform: scale(1.15); }
+span.graph-link.disabled {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1;
+  opacity: 0.28;
+  filter: grayscale(1);
+  cursor: default;
+}
+
+/* ---------- 楽曲別ページ（holo_pokajan/songs/*.html）専用 ---------- */
+.song-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.song-head-text { flex: 1 1 auto; min-width: 0; }
+.song-thumb {
+  flex: 0 0 auto;
+  display: block;
+  width: 240px;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #eee;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-soft);
+  transition: transform 0.15s ease;
+}
+.song-thumb:hover { transform: translateY(-3px); }
+.song-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 700px) {
+  .song-head { flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
+  .song-thumb { width: 100%; max-width: 320px; }
+}
+
+.artist-line { color: var(--text-secondary); font-size: 1rem; margin: 0 0 14px; }
+.artist-line a { color: var(--text-secondary); font-weight: 700; }
+.artist-line a:hover { color: var(--accent-pink-strong); }
+
+.meta-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.meta-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.76rem; font-weight: 700;
+  background: var(--bg-card); border: 1px solid var(--border-soft);
+  padding: 5px 11px; border-radius: 999px; color: var(--text-secondary);
+}
+.meta-badge .k { color: var(--text-muted); font-weight: 600; }
+
+.desc-block p { color: var(--text-secondary); font-size: 0.92rem; margin: 0 0 12px; }
+.desc-block strong { color: var(--text-primary); }
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+@media (max-width: 640px) { .stat-row { grid-template-columns: repeat(2, 1fr); } }
+.stat-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 14px;
+  box-shadow: var(--shadow-card);
+}
+.stat-tile .label { font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px; }
+.stat-tile .value { font-size: 1.15rem; font-weight: 800; color: var(--text-primary); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.stat-tile .value.pos { color: var(--accent-green-strong); }
+.stat-tile .sub { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
+
+.chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 20px 20px 8px;
+}
+.chart-card-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.chart-card-head h3 { margin: 0; font-size: 0.92rem; font-weight: 800; color: var(--text-primary); }
+.chart-card-head .note { font-size: 0.72rem; color: var(--text-muted); }
+
+svg.trend { width: 100%; height: auto; overflow: visible; font-family: var(--font-sans); }
+.grid-line { stroke: var(--border-soft); stroke-width: 1; }
+.axis-label { fill: var(--text-muted); font-size: 11px; }
+.trend-line { fill: none; stroke: var(--accent-purple-strong); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.trend-area { fill: url(#areaFill); }
+.hit { fill: transparent; cursor: pointer; }
+.ref-line { stroke: var(--accent-red-strong); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.ref-label { fill: var(--accent-red-strong); font-size: 10.5px; font-weight: 800; }
+
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--text-primary);
+  color: #fff;
+  font-size: 0.76rem;
+  padding: 7px 10px;
+  border-radius: 8px;
+  line-height: 1.5;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.1s ease;
+  z-index: 5;
+  font-variant-numeric: tabular-nums;
+}
+.chart-tooltip.show { opacity: 1; }
+.chart-tooltip .d { color: #d8c9ff; font-weight: 700; }
+.chart-wrap { position: relative; }
+
 .badge {
   display: inline-block;
   font-size: 0.72rem;
