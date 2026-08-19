@@ -323,7 +323,7 @@ document.querySelectorAll('#song-views-table thead th[data-key]').forEach(th => 
     } else {
       currentSort = { key, dir: key === 'title' || key === 'implDate' ? 1 : -1 };
     }
-    document.querySelectorAll('#song-views-table thead th').forEach(h => {
+    document.querySelectorAll('#song-views-table thead th[data-key]').forEach(h => {
       h.classList.remove('sorted');
       h.querySelector('.arrow').textContent = '↕';
     });
