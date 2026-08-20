@@ -46,15 +46,20 @@
 <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=260820338756&wid=001&eno=01&mid=s00000027111001003000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BAA9E+CI3Q42+5T6U+5YZ75" alt="">`;
 
+  // DMM Books（全年齢・青年マンガ/ライトノベル）
+  var AD_MANGA_VTUBER8 = `<a href="https://al.dmm.com/?lurl=https%3A%2F%2Fbook.dmm.com%2Fproduct%2F4231605%2Fb000fhftx00349%2F&af_id=yukimaria9-001&ch=search_link&ch_id=package" rel="sponsored" target="_blank"><img src="https://ebook-assets.dmm.com/digital/e-book/b000fhftx00349/b000fhftx00349pl.jpg" style="margin:0;padding:0;border:0;max-width:100%" /></a>`;
+
+  var AD_MANGA_FURARE = `<a href="https://al.dmm.com/?lurl=https%3A%2F%2Fbook.dmm.com%2Fproduct%2F4150560%2Fb355iakta71869%2F&af_id=yukimaria9-001&ch=search_link&ch_id=package" rel="sponsored" target="_blank"><img src="https://ebook-assets.dmm.com/digital/e-book/b355iakta71869/b355iakta71869pl.jpg" style="margin:0;padding:0;border:0;max-width:100%" /></a>`;
+
   // 掲載枠ごとの候補プール。data-ad-slot の値がキーに対応する。
   // pc-fixed は画面右下に追従するフロート表示（幅300px程度）のため、横長の728x90ではなく
   // 300x250系（pc-inlineと同じ顔ぶれ）を使う。728x90タグ(AD_MACROMILL_728x90 / AD_VIVION_728x90)は
   // 将来ワイドな固定枠を作る場合のために残してあるが、現状は未使用。
   var A8_AD_POOLS = {
-    "pc-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "sp-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "pc-fixed": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "sp-fixed": [AD_MACROMILL_320x50, AD_POINTINCOME_300x250, AD_GAMERS_320x50, AD_VIVION_320x50]
+    "pc-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250, AD_MANGA_VTUBER8, AD_MANGA_FURARE],
+    "sp-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250, AD_MANGA_VTUBER8, AD_MANGA_FURARE],
+    "pc-fixed": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250, AD_MANGA_VTUBER8, AD_MANGA_FURARE],
+    "sp-fixed": [AD_MACROMILL_320x50, AD_POINTINCOME_300x250, AD_GAMERS_320x50, AD_VIVION_320x50, AD_MANGA_VTUBER8, AD_MANGA_FURARE]
   };
 
   // ページ内に同じ枠が複数あっても(例: 本文中とページ下部)、それぞれ独立にランダム抽選する。
