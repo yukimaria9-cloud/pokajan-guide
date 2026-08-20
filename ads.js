@@ -47,10 +47,13 @@
 <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BAA9E+CI3Q42+5T6U+5YZ75" alt="">`;
 
   // 掲載枠ごとの候補プール。data-ad-slot の値がキーに対応する。
+  // pc-fixed は画面右下に追従するフロート表示（幅300px程度）のため、横長の728x90ではなく
+  // 300x250系（pc-inlineと同じ顔ぶれ）を使う。728x90タグ(AD_MACROMILL_728x90 / AD_VIVION_728x90)は
+  // 将来ワイドな固定枠を作る場合のために残してあるが、現状は未使用。
   var A8_AD_POOLS = {
     "pc-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
     "sp-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "pc-fixed": [AD_MACROMILL_728x90, AD_VIVION_728x90],
+    "pc-fixed": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
     "sp-fixed": [AD_MACROMILL_320x50, AD_POINTINCOME_300x250, AD_GAMERS_320x50, AD_VIVION_320x50]
   };
 

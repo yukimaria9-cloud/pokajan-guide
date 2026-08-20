@@ -983,6 +983,24 @@ svg.trend { width: 100%; height: auto; overflow: visible; font-family: var(--fon
   .ad-sp-only { display: block; }
 }
 
+/* ページ末尾の #ad-fixed は、PCでは画面右下に追従するフロート広告として表示する。
+   （忍者AdMax時代はAdMax側のスクリプトがこの追従表示を自前で行っていたため、
+   置き換え後はCSSで同等の見た目を再現する） */
+#ad-fixed img { max-width: 100%; height: auto; }
+@media (min-width: 768px) {
+  #ad-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  }
+}
+
 /* ---------- 配信リスト（動画カード） ---------- */
 .video-grid {
   display: grid;

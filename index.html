@@ -147,6 +147,19 @@
     .ad-sp-only { display: block; }
   }
   #ad-inline-hub img, #ad-fixed-hub img { max-width: 100%; height: auto; }
+  @media (min-width: 768px) {
+    #ad-fixed-hub {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      max-width: 300px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 6px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    }
+  }
 </style>
 </head>
 <body>
