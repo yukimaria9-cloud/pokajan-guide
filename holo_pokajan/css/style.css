@@ -708,6 +708,28 @@ a.song-link:hover {
   }
 }
 
+/* 勢い列（実装後 vs 実装前の1日あたり伸びの比率） */
+td.momentum-cell {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  transition: background-color 0.15s ease;
+}
+td.momentum-1 {
+  background: rgba(217, 119, 6, 0.10);
+  color: var(--accent-gold-strong);
+}
+td.momentum-2 {
+  background: rgba(217, 119, 6, 0.20);
+  color: var(--accent-gold-strong);
+  font-weight: 800;
+}
+td.momentum-3 {
+  background: rgba(217, 119, 6, 0.32);
+  color: var(--accent-gold-strong);
+  font-weight: 800;
+  box-shadow: inset 3px 0 0 var(--accent-gold-strong);
+}
+
 /* 推移グラフ列（曲名一覧 → 楽曲別ページへの導線） */
 th.graph-col, td.graph-col {
   text-align: center;
