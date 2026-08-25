@@ -57,8 +57,20 @@
 - 個別ページのPOINTS配列は上書きではなく、旧「現在」ポイントの note から「現在」の文字だけ外して残し、新しい日付・値のポイントを追記する方式（実データを消さない）。
 - 「伸び率の平均・中央値」の説明文（callout）はROWS更新スクリプトが自動反映しないため手動更新が必要と判明。8/21・8/23の2回連続で更新し忘れる事故があり、その都度修正。
 
+## 2026-08-24: 再生数更新の自動化（pokajan-tools）
+
+- 公開サイトフォルダ外に`pokajan-tools`（YouTube Data APIキーを使うNodeスクリプト一式）を新設。`node scripts/fetch-views.js && node scripts/update-views.js`の2コマンドで、表(ROWS)・NOW_DATE・伸び率callout・個別ページのmeta-badge/stat-tile/desc-block本文/footer日付/POINTS配列まで一括更新できるようにした。
+- 導入時点で個別ページ側のmeta-badge/stat-tile/desc-block/footer日付が自動更新対象から漏れていたのを発見・修正（表とページの数値がズレる問題が再発していた）。
+- 表側(song-views.html/en/id)のfooter日付も同様に自動更新対象に追加。
+
+## 2026-08-25: 天たこ観測追加（4曲目のMV+Full合算曲）
+
+- 『天たこ観測』姫森ルーナ（イベント「アルティメットサマー！ for Me？」課題曲。2026/8/23にゲーム内先行実装、翌8/24にMV公開、日付が変わった8/25未明にFull ver.公開）を追加。全80曲に。
+- 作詞・作曲・編曲はLysi.。MV＋Full ver.の再生数を合算して扱う4曲目の曲として`pokajan-tools/data/song-config.json`の`fullVerMap`に登録。
+
 ## 既知の制約・今後の課題
 
 - 楽曲別推移グラフページ（`holo_pokajan/songs/*.html`）と「勢い」列はJPページのみ対応。EN/ID版には未展開。
 - ω猫（AZKi）はarchive.orgにほぼ史料が存在せず、実装日時点の再生数データなし（対象外表示）。
-- Full ver.再生数合算の対象は現状3曲（NIGHTBREAK・万歳☆満開・Oshi Mode ON）。今後同様のパターン（MV+Full二本立て公開）の曲が増えた場合は都度対応が必要。
+- Full ver.再生数合算の対象は現状4曲（NIGHTBREAK・万歳☆満開・Oshi Mode ON・天たこ観測）。今後同様のパターン（MV+Full二本立て公開）の曲が増えた場合は都度`song-config.json`への登録が必要。
+- 新曲追加（ROWSへの行追加・個別ページ作成）は`update-views.js`の対象外で、引き続き手作業（またはClaudeへの依頼）が必要。
