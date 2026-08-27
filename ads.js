@@ -50,11 +50,15 @@
   // pc-fixed は画面右下に追従するフロート表示（幅300px程度）のため、横長の728x90ではなく
   // 300x250系（pc-inlineと同じ顔ぶれ）を使う。728x90タグ(AD_MACROMILL_728x90 / AD_VIVION_728x90)は
   // 将来ワイドな固定枠を作る場合のために残してあるが、現状は未使用。
+  //
+  // 2026-08-27: A8.net広告を一時停止中（表示プールを空に）。広告タグ自体（AD_*）は
+  // 復元しやすいよう削除せずそのまま残してある。元の状態は
+  // pokajan-tools/backups/ads.js.2026-08-27-before-a8net-pause.js に保存済み。
   var A8_AD_POOLS = {
-    "pc-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "sp-inline": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "pc-fixed": [AD_MACROMILL_300x250, AD_POINTINCOME_300x250, AD_GAMERS_300x250, AD_MDL_300x250, AD_VIVION_300x250, AD_GOKURAKUYU_300x250],
-    "sp-fixed": [AD_MACROMILL_320x50, AD_POINTINCOME_300x250, AD_GAMERS_320x50, AD_VIVION_320x50]
+    "pc-inline": [],
+    "sp-inline": [],
+    "pc-fixed": [],
+    "sp-fixed": []
   };
 
   // ページ内に同じ枠が複数あっても(例: 本文中とページ下部)、それぞれ独立にランダム抽選する。
