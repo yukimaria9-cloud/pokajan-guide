@@ -981,6 +981,12 @@ svg.trend { width: 100%; height: auto; overflow: visible; font-family: var(--fon
 }
 .shot.ratio-16-9 { aspect-ratio: 16 / 9; }
 .shot.ratio-4-3 { aspect-ratio: 4 / 3; }
+.img-credit {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin: 4px 2px 0;
+}
 
 /* ---------- 広告スロット ----------
    忍者AdMax のタグは document.write() を使うため、JSでの動的挿入ではなく
